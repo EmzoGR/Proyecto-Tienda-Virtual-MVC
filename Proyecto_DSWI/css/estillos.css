@@ -1,0 +1,245 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+section{
+    position: relative;
+    min-height: 100vh;
+    background: #fee648;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+section .general{
+    position: relative;
+    width: 800px;
+    height: 500px;
+    background: #fff;
+    box-shadow: 0 15px 50px rgba(0,0,0,1);
+    overflow: hidden;
+    
+}
+section .general .user{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+} 
+section .general .user .imgBx{
+     position: relative;
+     width: 50%;
+     height: 100%;
+     background: #ff0;
+     transition: 0.5s;
+}
+section .general .user .imgBx img{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    /*object-fit: cover;*/
+}
+section .general .user .formBx{
+    position: relative;
+    width: 50%;
+    height: 100%;
+    background: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 40px;    
+    transition: 0.5s;
+}
+section .general .user .formBx form h2{
+    font-size: 18px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    text-align: center;
+    width: 100%;
+    margin-bottom: 10px;
+    color: #555;
+    transition: 1s;
+    animation: juego 4s infinite;
+    padding-top: 20px;
+}
+/*section .general .user .formBx form h2:hover{
+    letter-spacing: 4px;
+    animation: juego 4s infinite; }*/
+
+@keyframes juego{
+    /*from{background-color: lawngreen;letter-spacing: 2px;}
+    to{background-color: lightcoral;letter-spacing: 5px;}*/
+    0%{letter-spacing: 3px;}
+    25%{letter-spacing: 4px;}
+    50%{letter-spacing: 5px;}
+    75%{letter-spacing: 6px;}
+    100%{letter-spacing: 4px;}
+}
+
+section .general .user .formBx form input{
+    position: relative;
+    width: 100%;
+    padding: 10px;
+    background: #f5f5f5;
+    color: #333;
+    border: none;
+    box-shadow: none;
+    margin: 8px 0;
+    font-size: 14px;
+    letter-spacing: 1px;
+    font-weight: 300;
+    /*animation: texto 4s infinite;*/
+}
+@keyframes texto{
+    25%{text-align: center;}
+    50%{text-align: left;}
+    75%{text-align: center;}
+    100%{text-align: left;}
+}
+/*********   Mensajes         **************/
+ .error{
+    
+    justify-content: center;
+    font-size:12px;
+    padding:10px;
+    text-align:center;
+    transition: 0.5s ease;
+    animation: fade 5s 1 ease-in;
+    color: white;
+    width: 50%;
+    height: 50px;
+}
+@keyframes fade{
+    20%{
+         background: #34495e;
+         width: 100%;
+         height: 50px;
+ }
+     80%{
+         background: #34495e;
+         width: 100%;
+         height: 50px;
+     }
+ }
+ .correcto{
+    
+    height: 50px;
+    font-size:12px;
+    padding: 10px;
+    color: white;
+    text-align:center;
+    transition: 0.5s ease;
+    animation: fade 5s 1 ease-in ;
+    width: 50%;
+    justify-content: center;
+}
+.grabado{
+    font-size:12px;
+    padding:5px;
+    text-align:center;
+    transition: 0.5s ease;
+    animation: grabado 5s 1 ease-in;
+    color: white;
+    width: 50%;
+   
+}
+@keyframes grabado{
+    20%{
+         background: #34495e;
+         width: 100%;
+         
+ }
+     80%{
+         background: #34495e;
+         width: 100%;
+         
+     }
+ }
+
+section .general .user .formBx form input[type="submit"]{
+    max-width: 150px;
+    background: #677eff;
+    cursor: pointer;
+    font-size: 14px;
+    font-weight: 500;
+    letter-spacing: 1px;
+    transition: 0.9s ease;
+}
+section .general .user .formBx form input[type="submit"]:hover{
+    max-width: 100%;
+    /*transform: rotate(360deg);*/
+}
+section .general .user .formBx form .signup{
+    position: relative;
+    margin-top: 20px;
+    font-size: 12px;
+    letter-spacing: 1px;
+    color: #555;
+    text-transform: uppercase;
+    font-weight: 300;
+}
+section .general .user .formBx form .signup a{
+    font-weight: 600;
+    text-decoration: none;
+    color: #677eff;
+    animation: prende 4s infinite;
+}
+@keyframes prende{
+    from{box-shadow: 0 0 0 0 #677eff ;}
+    to{box-shadow:2px 2px 2px  #677eff;}
+}
+section .general .singupBx .formBx{
+    left: 100%;
+}
+section .general .singupBx{
+    pointer-events: none;
+}
+section .general .singupBx .imgBx{
+    left: -100%;
+}
+/* CLICK JAVASCRIPT */
+section .general.active .singupBx .formBx{
+    left: 0;
+}
+section .general.active .singupBx .imgBx{
+    left: 0;
+
+}
+section .general.active .singupBx{
+   pointer-events: initial;
+}
+
+/* JavaScript Crear Cuenta*/
+section .general .singinBox .formBx{
+    left: 0;
+}
+section .general.active .singinBox .formBx{
+    left: 100%;
+}
+section .general .singinBox .imgBx{
+    left: 0;
+}
+section .general.active .singinBox .imgBx{
+    left: -100%;
+}
+
+/* Responsive*/
+@media (max-width:990px){
+    section .general{
+        max-width: 400px;
+    }
+    section .general .imgBx{
+        display: none;
+    }
+    section .general .user .formBx{
+        width: 100%;
+    }
+    
+}

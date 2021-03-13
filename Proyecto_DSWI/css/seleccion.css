@@ -1,0 +1,88 @@
+
+#resultadoSeleccion{
+    width: 100%;
+    display: flex;
+    
+}#resultadoSeleccion #imgSeleccion{
+    min-width: 40%;
+}
+#imgSeleccion img{
+     min-width:70%;
+     
+}
+#resultadoSeleccion #contenedorSeleccion{
+   min-width: 60%;
+  
+   display: grid;
+   flex-direction: row;
+}
+#contenedorSeleccion  #DescSeleccion{
+    max-width: 100%;
+}
+#DescSeleccion a{
+    text-decoration: none;
+    font-size:16px;
+    color:#7f8c8d;
+    font-weight: 300;
+}
+#DescSeleccion a:hover{
+    color:black;
+    cursor: pointer;
+}
+#contenedorSeleccion #precioSeleccion {
+    max-width: 100%;
+    text-align:start;
+}
+#contenedorSeleccion #cantidadSeleccion{
+    
+    text-align: start;
+    
+}
+#cantidadSeleccion #cantidad{
+    max-width: 10%;
+}
+#contenedorSeleccion #botones{
+    padding: 0;
+    margin: 0;
+}
+#botones button{
+    min-width: 20%;
+    padding:10px 20px;
+}
+#footer{
+    bottom: 0;
+    position: absolute;
+}
+
+/* MediaQueries */
+@media (max-width:800px){
+    
+    #resultadoSeleccion {
+        display: grid;
+        
+        
+    }
+    #resultadoSeleccion #imgSeleccion img{
+        min-width: 100%;
+        justify-content: center;
+    }
+    #contenedorSeleccion  #DescSeleccion{
+        padding: 20px 0px;
+    }
+    #contenedorSeleccion #precioSeleccion {
+        padding: 20px 0px;
+    }
+    #contenedorSeleccion #cantidadSeleccion{
+        
+        padding: 20px 0px;
+        
+    }
+    #contenedorSeleccion #botones{
+      
+    }
+    #footer{
+        bottom: 0;
+        position: fixed;
+    }
+    
+}

@@ -1,0 +1,118 @@
+﻿
+#resultadoSeleccion {
+    width: 100%;
+    display: flex;
+}
+
+    #resultadoSeleccion #imgSeleccion {
+        min-width: 30%;
+    }
+
+#imgSeleccion img {
+    min-width: 70%;
+   
+    
+}
+
+#resultadoSeleccion #contenedorSeleccion {
+    min-width: 40%;
+    display: grid;
+    flex-direction: row;
+}
+#resultadoSeleccion #subtotal{
+    min-width:20%;
+   
+    text-align:end;
+}
+
+#contenedorSeleccion #DescSeleccion {
+    max-width: 100%;
+}
+
+#DescSeleccion a {
+    text-decoration: none;
+    font-size: 16px;
+    color: #7f8c8d;
+    font-weight: 300;
+}
+
+    #DescSeleccion a:hover {
+        color: black;
+        cursor: pointer;
+    }
+
+#contenedorSeleccion #precioSeleccion {
+    max-width: 100%;
+    text-align: start;
+}
+
+#contenedorSeleccion #cantidadSeleccion {
+    text-align: start;
+}
+
+#cantidadSeleccion #cantidad {
+    max-width: 10%;
+}
+
+#contenedorSeleccion #botones {
+    padding: 0;
+    margin: 0;
+}
+
+#botones button {
+    min-width: 20%;
+    padding: 10px 20px;
+}
+#compra {
+    left: 73%;
+    position: fixed;
+    z-index: 100;
+    overflow: hidden;
+}
+#footer {
+    bottom: 0;
+    position: fixed;
+}
+#pago {
+    overflow:hidden;
+    background: red;
+}
+#zoid-paypal-buttons-4c87896f78_mtg6mdk6mtc{
+    
+}
+/* MediaQueries */
+@media (max-width:900px) {
+    #resultadoSeleccion {
+        display: grid;
+    }
+
+        #resultadoSeleccion #imgSeleccion img {
+            min-width: 100%;
+            justify-content: center;
+        }
+
+    #contenedorSeleccion #DescSeleccion {
+        padding: 20px 0px;
+    }
+
+    #contenedorSeleccion #precioSeleccion {
+        padding: 20px 0px;
+    }
+
+    #contenedorSeleccion #cantidadSeleccion {
+        padding: 20px 0px;
+    }
+
+    #contenedorSeleccion #botones {
+    }
+
+    #footer {
+        bottom: 0;
+        position: fixed;
+    }
+    #compra{
+        
+        position:static;
+        z-index:0;
+    }
+}
